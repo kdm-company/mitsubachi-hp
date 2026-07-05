@@ -1,6 +1,5 @@
 /* =========================================================
-   株式会社MITSUBACHI コーポレートサイト
-   カラーパレット：ドラフト版（片岡鶴太郎の色使い参照・要クライアント確認）
+   株式会社MITSUBACHI コーポレートサイト — FINAL v3
    ========================================================= */
 :root {
   --honey: #E8A13D;
@@ -21,9 +20,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
-
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
   font-size: 16px;
@@ -31,13 +28,11 @@ body {
   color: var(--ink);
   background: var(--cream);
 }
-
 h1, h2, h3, h4, .brand-text {
   font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
   line-height: 1.4;
   color: var(--ai-deep);
 }
-
 img, svg { max-width: 100%; height: auto; }
 a { color: var(--ai); }
 
@@ -47,12 +42,12 @@ a { color: var(--ai); }
   padding: 0 24px;
 }
 
-/* ---------- Header ---------- */
+/* ---- Header ---- */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255,255,255,0.96);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(6px);
 }
@@ -124,7 +119,7 @@ a { color: var(--ai); }
   color: var(--ai-deep);
 }
 
-/* ---------- Hero ---------- */
+/* ---- Hero ---- */
 .hero {
   background: var(--white);
   border-bottom: 1px solid var(--border);
@@ -133,7 +128,7 @@ a { color: var(--ai); }
 .hero-inner {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 56px 24px 48px;
+  padding: 56px 24px 40px;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 32px;
@@ -160,10 +155,31 @@ a { color: var(--ai); }
   margin-bottom: 16px;
   letter-spacing: 0.05em;
 }
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
 .hero-visual svg { width: 100%; height: auto; display: block; }
 
-/* ---------- Buttons ---------- */
+/* 信頼バッジ行 */
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 8px;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+.hero-badge svg { color: var(--honey-deep); }
+
+/* ---- Buttons ---- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -188,8 +204,15 @@ a { color: var(--ai); }
   border: 1.5px solid var(--ai);
 }
 .btn-outline:hover { background: var(--green-soft); }
+.btn-tel {
+  background: var(--white);
+  color: var(--ai-deep);
+  border: 1.5px solid var(--border);
+  font-size: 15px;
+}
+.btn-tel:hover { background: var(--honey-soft); }
 
-/* ---------- Sections ---------- */
+/* ---- Sections ---- */
 .section { padding: 72px 0; }
 .section-alt { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .section-head { text-align: center; margin-bottom: 44px; }
@@ -204,7 +227,7 @@ a { color: var(--ai); }
 .section-head h2 { font-size: 28px; }
 .section-head p { color: var(--muted); margin-top: 12px; }
 
-/* ---------- Cards ---------- */
+/* ---- Cards ---- */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -216,6 +239,7 @@ a { color: var(--ai); }
   border-radius: var(--radius);
   padding: 28px 24px;
   transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
 }
 .card:hover {
   transform: translateY(-2px);
@@ -235,7 +259,181 @@ a { color: var(--ai); }
 .card h3 { font-size: 17px; margin-bottom: 8px; }
 .card p { font-size: 14px; color: var(--muted); }
 
-/* ---------- About teaser ---------- */
+/* タグピル (クレライフ型) */
+.tag-pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+.tag-pill-honey { background: var(--honey-soft); color: var(--honey-deep); }
+.tag-pill-ai    { background: #E5EBF2; color: var(--ai-deep); }
+.tag-pill-green { background: var(--green-soft); color: var(--green); }
+.tag-pill-shu   { background: var(--shu-soft); color: var(--shu); }
+
+/* ---- お悩みチェックリスト -> 解決帯 (クラプロ型) ---- */
+.worry-section {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 72px 0;
+}
+.check-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 32px;
+}
+.check-item {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.check-item::before {
+  content: '✓';
+  color: var(--shu);
+  font-weight: 900;
+  font-size: 15px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.worry-arrow {
+  text-align: center;
+  font-size: 32px;
+  color: var(--honey-deep);
+  margin-bottom: 24px;
+  line-height: 1;
+}
+.solution-band {
+  background: linear-gradient(135deg, var(--ai-deep) 0%, var(--ai) 100%);
+  border-radius: var(--radius);
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.solution-band-text h3 {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+.solution-band-text p {
+  color: rgba(255,255,255,0.80);
+  font-size: 15px;
+}
+.solution-band .btn-primary {
+  background: var(--honey);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ---- ご相談の流れ (Diggle型) ---- */
+.flow-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+  counter-reset: flow;
+}
+.flow-list::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: calc(12.5% + 20px);
+  right: calc(12.5% + 20px);
+  height: 2px;
+  background: var(--border);
+  z-index: 0;
+}
+.flow-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 12px;
+  position: relative;
+  z-index: 1;
+}
+.flow-num {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--honey);
+  color: #fff;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(232,161,61,0.35);
+  line-height: 1.2;
+}
+.flow-num span { font-size: 20px; }
+.flow-item h4 { font-size: 15px; margin-bottom: 6px; }
+.flow-item p { font-size: 13px; color: var(--muted); }
+
+/* ---- CTA 2列 (Diggle型) ---- */
+.cta-band {
+  background: var(--ai-deep);
+  color: #fff;
+  padding: 64px 24px;
+}
+.cta-band h2 { color: #fff; font-size: 26px; margin-bottom: 8px; text-align: center; }
+.cta-band > .container > p { color: rgba(255,255,255,0.75); margin-bottom: 32px; text-align: center; }
+.cta-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 660px;
+  margin: 0 auto;
+}
+.cta-col {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.cta-micro {
+  font-size: 12px;
+  color: rgba(255,255,255,0.70);
+  line-height: 1.5;
+}
+.cta-col .btn-primary { width: 100%; justify-content: center; }
+.cta-col .btn-tel {
+  width: 100%;
+  justify-content: center;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border-color: rgba(255,255,255,0.30);
+}
+.cta-col .btn-tel:hover { background: rgba(255,255,255,0.22); }
+
+/* legacy simple CTA */
+.cta-band .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.cta-band .btn-outline { background: transparent; color: #fff; border-color: rgba(255,255,255,0.6); }
+.cta-band .btn-outline:hover { background: rgba(255,255,255,0.1); }
+
+/* ---- About teaser ---- */
 .about-teaser {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -254,25 +452,22 @@ a { color: var(--ai); }
   padding: 4px 14px;
 }
 
-/* ---------- News ---------- */
+/* ---- News ---- */
 .news-list { display: grid; gap: 12px; max-width: 760px; margin: 0 auto; }
 .news-item {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 18px 24px;
+  padding: 16px 20px;
   display: flex;
-  gap: 20px;
-  align-items: baseline;
+  gap: 14px;
+  align-items: center;
   text-decoration: none;
   transition: border-color 0.2s;
+  flex-wrap: wrap;
 }
 .news-item:hover { border-color: var(--honey); }
-.news-item time {
-  color: var(--muted);
-  font-size: 13px;
-  white-space: nowrap;
-}
+.news-item time { color: var(--muted); font-size: 13px; white-space: nowrap; flex-shrink: 0; }
 .news-item .label {
   font-size: 12px;
   font-weight: 700;
@@ -281,24 +476,11 @@ a { color: var(--ai); }
   border-radius: 999px;
   padding: 2px 10px;
   white-space: nowrap;
+  flex-shrink: 0;
 }
-.news-item span.title { color: var(--ink); font-size: 15px; }
+.news-item span.title { color: var(--ink); font-size: 15px; flex: 1; min-width: 0; }
 
-/* ---------- CTA band ---------- */
-.cta-band {
-  background: var(--ai-deep);
-  color: #fff;
-  text-align: center;
-  padding: 64px 24px;
-}
-.cta-band h2 { color: #fff; font-size: 26px; margin-bottom: 12px; }
-.cta-band p { color: rgba(255,255,255,0.75); margin-bottom: 28px; }
-.cta-band .btn-primary { background: var(--honey); }
-.cta-band .btn-outline { background: transparent; color: #fff; border-color: rgba(255,255,255,0.6); }
-.cta-band .btn-outline:hover { background: rgba(255,255,255,0.1); }
-.cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
-/* ---------- Page header (下層) ---------- */
+/* ---- Page header (下層) ---- */
 .page-head {
   background: var(--white);
   border-bottom: 1px solid var(--border);
@@ -316,7 +498,7 @@ a { color: var(--ai); }
 .page-head h1 { font-size: 32px; }
 .page-head p { color: var(--muted); margin-top: 12px; }
 
-/* ---------- Service detail ---------- */
+/* ---- Service detail ---- */
 .service-block {
   display: grid;
   grid-template-columns: 64px 1fr;
@@ -336,6 +518,7 @@ a { color: var(--ai); }
   align-items: center;
   justify-content: center;
   color: var(--honey-deep);
+  flex-shrink: 0;
 }
 .service-block h3 { font-size: 20px; margin-bottom: 8px; }
 .service-block p { color: var(--muted); font-size: 15px; }
@@ -349,7 +532,50 @@ a { color: var(--ai); }
   display: inline-block;
 }
 
-/* ---------- Company ---------- */
+/* ---- FAQ アコーディオン ---- */
+.faq-list { max-width: 760px; margin: 0 auto; display: grid; gap: 10px; }
+.faq-list details {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.faq-list details[open] { border-color: var(--honey); }
+.faq-list summary {
+  padding: 18px 20px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after {
+  content: '＋';
+  font-size: 18px;
+  color: var(--honey-deep);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.faq-list details[open] summary::after { content: '－'; }
+.faq-q-label {
+  color: var(--honey-deep);
+  font-size: 15px;
+  font-weight: 900;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.faq-list .faq-body {
+  padding: 14px 20px 18px;
+  font-size: 15px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+/* ---- Company ---- */
 .message-card {
   background: var(--white);
   border: 1px solid var(--border);
@@ -382,7 +608,8 @@ a { color: var(--ai); }
   font-size: 15px;
   vertical-align: top;
 }
-.company-table tr:last-child th, .company-table tr:last-child td { border-bottom: none; }
+.company-table tr:last-child th,
+.company-table tr:last-child td { border-bottom: none; }
 .company-table th {
   width: 160px;
   background: var(--honey-soft);
@@ -400,7 +627,7 @@ a { color: var(--ai); }
 .related-card h3 { margin-bottom: 8px; }
 .related-card p { font-size: 15px; color: var(--ink); }
 
-/* ---------- Contact ---------- */
+/* ---- Contact ---- */
 .contact-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -421,11 +648,7 @@ a { color: var(--ai); }
   margin-bottom: 6px;
   color: var(--ai-deep);
 }
-.form-row .req {
-  color: var(--shu);
-  font-size: 12px;
-  margin-left: 6px;
-}
+.form-row .req { color: var(--shu); font-size: 12px; margin-left: 6px; }
 .form-row input, .form-row textarea, .form-row select {
   width: 100%;
   padding: 12px 14px;
@@ -447,17 +670,25 @@ a { color: var(--ai); }
   border-radius: var(--radius);
   padding: 24px;
 }
+.contact-card.honey {
+  background: var(--honey-soft);
+  border-color: var(--honey);
+}
 .contact-card h3 { font-size: 16px; margin-bottom: 8px; }
 .contact-card p { font-size: 14px; color: var(--muted); margin-bottom: 12px; }
 .contact-card .tel {
-  font-size: 24px;
+  display: block;
+  font-size: 26px;
   font-weight: 700;
   color: var(--ai-deep);
   text-decoration: none;
   font-family: "Zen Maru Gothic", sans-serif;
+  margin-bottom: 4px;
 }
+.contact-card.honey .tel { color: var(--honey-deep); }
+.contact-card .tel-note { font-size: 12px; color: var(--muted); }
 
-/* ---------- Footer ---------- */
+/* ---- Footer ---- */
 .site-footer {
   background: var(--ai-deep);
   color: rgba(255,255,255,0.85);
@@ -497,12 +728,16 @@ a { color: var(--ai); }
   color: rgba(255,255,255,0.6);
 }
 
-/* ---------- Responsive ---------- */
+/* ---- Responsive 860px ---- */
 @media (max-width: 860px) {
   .hero-inner { grid-template-columns: 1fr; padding: 40px 24px; }
   .hero-copy h1 { font-size: 28px; }
   .hero-visual { order: -1; max-width: 380px; margin: 0 auto; }
   .card-grid { grid-template-columns: 1fr 1fr; }
+  .check-grid { grid-template-columns: 1fr 1fr; }
+  .flow-list { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .flow-list::before { display: none; }
+  .cta-cols { grid-template-columns: 1fr 1fr; }
   .about-teaser { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
@@ -523,248 +758,24 @@ a { color: var(--ai); }
   }
   .site-nav.open { display: flex; }
   .site-nav a.nav-cta { margin-left: 0; justify-content: center; }
+
+  .solution-band { flex-direction: column; align-items: flex-start; padding: 24px 24px; }
 }
 
+/* ---- Responsive 560px ---- */
 @media (max-width: 560px) {
   .card-grid { grid-template-columns: 1fr; }
+  .check-grid { grid-template-columns: 1fr; }
+  .flow-list { grid-template-columns: 1fr; }
+  .cta-cols { grid-template-columns: 1fr; }
   .section { padding: 48px 0; }
   .service-block { grid-template-columns: 1fr; padding: 24px; }
+  .service-block .icon { width: 52px; height: 52px; }
   .message-card { padding: 28px 20px; }
   .company-table th { width: 110px; font-size: 13px; }
   .hero-copy h1 { font-size: 25px; }
   .page-head h1 { font-size: 26px; }
+  .solution-band-text h3 { font-size: 18px; }
+  .news-item { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .faq-list summary { font-size: 14px; }
 }
-
-/* =========================================================
-   Round1: パーツ別参照パーツ（partsdesign.net掲載サイトの構造を再現）
-   - ヒーロー信頼バッジ行
-   - お悩みチェックリスト→矢印→解決帯（クラプロ型）
-   - タグピル付きカード（クレライフ型）
-   - 番号付きフロー（Diggle型）
-   - マイクロコピー付きCTA（Diggle/クラプロ型）
-   ========================================================= */
-
-/* ヒーロー信頼バッジ */
-.hero-badges {
-  list-style: none;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 22px;
-  padding: 0;
-}
-.hero-badges li {
-  font-size: 13px;
-  font-weight: 500;
-  background: var(--green-soft);
-  color: var(--green);
-  border-radius: 999px;
-  padding: 4px 14px;
-}
-
-/* お悩みチェックリスト */
-.check-grid {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 0;
-}
-.check-grid li {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 14px 18px 14px 48px;
-  position: relative;
-  font-size: 15px;
-}
-.check-grid li::before {
-  content: "";
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: var(--honey);
-}
-.check-grid li::after {
-  content: "";
-  position: absolute;
-  left: 21px;
-  top: 50%;
-  width: 8px;
-  height: 4px;
-  border-left: 2.2px solid #fff;
-  border-bottom: 2.2px solid #fff;
-  transform: translateY(-75%) rotate(-45deg);
-}
-
-/* 矢印→解決帯 */
-.worry-arrow {
-  width: 0;
-  height: 0;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-top: 22px solid var(--honey);
-  margin: 28px auto 24px;
-}
-.solution-band {
-  background: var(--honey-soft);
-  border-radius: var(--radius);
-  text-align: center;
-  padding: 36px 24px;
-  max-width: 860px;
-  margin: 0 auto;
-}
-.solution-catch {
-  font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--ai-deep);
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
-.solution-catch strong { color: var(--honey-deep); }
-.solution-band .solution-sub { color: var(--muted); font-size: 15px; }
-
-/* タグピル（カード用） */
-.tag-pill {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--shu);
-  background: var(--shu-soft);
-  border-radius: 999px;
-  padding: 2px 12px;
-  margin-bottom: 10px;
-}
-
-/* 番号付きフロー */
-.flow-list {
-  list-style: none;
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 0;
-}
-.flow-list li {
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 20px;
-  padding: 0 0 36px;
-  position: relative;
-}
-.flow-list li:last-child { padding-bottom: 0; }
-.flow-list li:not(:last-child)::before {
-  content: "";
-  position: absolute;
-  left: 27px;
-  top: 60px;
-  bottom: 4px;
-  width: 2px;
-  background: var(--border);
-}
-.flow-num {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--honey);
-  color: #fff;
-  font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-}
-.flow-step-label {
-  display: block;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--honey-deep);
-}
-.flow-list h3 { font-size: 18px; margin: 2px 0 6px; }
-.flow-list p { color: var(--muted); font-size: 15px; }
-
-/* マイクロコピー付きCTA */
-.cta-cols {
-  display: flex;
-  gap: 32px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 12px;
-}
-.cta-col { display: grid; gap: 10px; justify-items: center; align-content: start; }
-.cta-micro {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 14px;
-  font-weight: 700;
-}
-.btn-tel {
-  background: #fff;
-  color: var(--ai-deep);
-  font-size: 20px;
-  font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
-  padding: 10px 26px;
-}
-.btn-tel:hover { opacity: 0.9; }
-.cta-note { color: rgba(255, 255, 255, 0.6); font-size: 12px; }
-
-@media (max-width: 560px) {
-  .check-grid { grid-template-columns: 1fr; }
-  .solution-catch { font-size: 20px; }
-  .flow-list li { grid-template-columns: 44px 1fr; gap: 14px; }
-  .flow-num { width: 44px; height: 44px; font-size: 18px; }
-  .flow-list li:not(:last-child)::before { left: 21px; top: 48px; }
-  .cta-cols { gap: 20px; }
-}
-
-/* =========================================================
-   Round2: FAQアコーディオン（クラプロ型）
-   ========================================================= */
-.faq-list {
-  max-width: 760px;
-  margin: 0 auto;
-  display: grid;
-  gap: 12px;
-}
-.faq-list details {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
-.faq-list details[open] { border-color: var(--honey); }
-.faq-list summary {
-  list-style: none;
-  cursor: pointer;
-  display: flex;
-  gap: 14px;
-  align-items: baseline;
-  font-weight: 700;
-  color: var(--ai-deep);
-  padding: 18px 22px;
-  min-height: 44px;
-}
-.faq-list summary::-webkit-details-marker { display: none; }
-.faq-mark {
-  font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: var(--honey-deep);
-  flex-shrink: 0;
-}
-.faq-a {
-  display: flex;
-  gap: 14px;
-  align-items: baseline;
-  padding: 0 22px 18px;
-  color: var(--muted);
-  font-size: 15px;
-}
-.faq-a .faq-mark { color: var(--shu); }
