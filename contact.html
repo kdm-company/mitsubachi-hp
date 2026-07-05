@@ -50,7 +50,6 @@
     <div class="contact-grid">
 
       <form class="contact-form" action="#" method="post">
-        <!-- TODO: 公開時にフォーム送信先（サーバーサイド or フォームサービス）を設定 -->
         <div class="form-row">
           <label for="name">お名前<span class="req">必須</span></label>
           <input type="text" id="name" name="name" required autocomplete="name">
@@ -87,15 +86,15 @@
       </form>
 
       <div class="contact-aside">
-        <div class="contact-card" style="background:var(--honey-soft); border-color:var(--honey);">
-          <h3>お電話でのご相談</h3>
+        <div class="contact-card honey">
+          <h3>&#128222;&nbsp;お電話でのご相談</h3>
           <p>お急ぎの方はお電話が確実です。</p>
           <a class="tel" href="tel:0676551184">06-7655-1184</a>
+          <span class="tel-note">月〜土曜&nbsp;9:00〜18:00（祝祭日を除く）</span>
         </div>
         <div class="contact-card">
           <h3>LINEでのご相談</h3>
           <p>LINE公式アカウントからもご相談いただけます。補助金情報なども配信予定です。</p>
-          <!-- TODO: 公開時にLINE友だち追加URLを設定 -->
           <a class="btn btn-outline" href="#">友だち追加（準備中）</a>
         </div>
         <div class="contact-card">
@@ -109,20 +108,21 @@
   </div>
 </section>
 
+<!-- FAQ -->
 <section class="section section-alt">
   <div class="container">
     <div class="section-head">
       <span class="en">FAQ</span>
-      <h2>よくあるご質問</h2>
+      <h2>お問い合わせについて</h2>
     </div>
     <div class="faq-list">
       <details>
-        <summary><span class="faq-mark">Q</span>相談する内容が固まっていなくても連絡していいですか？</summary>
-        <div class="faq-a"><span class="faq-mark">A</span><p>はい。「何から相談すればいいか分からない」段階のご連絡も歓迎します。</p></div>
+        <summary><span class="faq-q-label">Q</span>連絡可能時間は？</summary>
+        <div class="faq-body">月曜〜土曜の9:00〜18:00を目安に対応しています。お問い合わせフォームは24時間受付しております。</div>
       </details>
       <details>
-        <summary><span class="faq-mark">Q</span>返信はどのくらいでもらえますか？</summary>
-        <div class="faq-a"><span class="faq-mark">A</span><p>内容を確認のうえ、担当より順次ご連絡します。お急ぎの場合はお電話をご利用ください。</p></div>
+        <summary><span class="faq-q-label">Q</span>現地見積もりはできますか？</summary>
+        <div class="faq-body">大阪府内であれば対応します。まずはお問い合わせフォームでご連絡ください。</div>
       </details>
     </div>
   </div>
@@ -134,10 +134,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-brand">株式会社MITSUBACHI</div>
-      <p>産業機械・工作機械の専門商社<br>
-      大阪府東大阪市中新開1丁目4番8号<br>
-      TEL: 06-7655-1184<br>
-      古物商認可：大阪府公安委員会 第6221R065306号</p>
+      <p>産業機械・工作機械の専門商社<br>大阪府東大阪市中新開1丁目4番8号<br>TEL: 06-7655-1184<br>古物商認可：大阪府公安委員会 第6221R065306号</p>
     </div>
     <nav class="footer-nav" aria-label="フッター">
       <a href="index.html">トップ</a>
@@ -148,7 +145,7 @@
       <a href="https://www.instagram.com/yuika.yamaue/" target="_blank" rel="noopener">Instagram</a>
     </nav>
   </div>
-  <div class="footer-copy">© <span id="year"></span> MITSUBACHI Co., Ltd.</div>
+  <div class="footer-copy">&copy; <span id="year"></span> MITSUBACHI Co., Ltd.</div>
 </footer>
 
 <script src="js/main.js"></script>
