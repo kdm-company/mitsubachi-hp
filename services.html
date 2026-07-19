@@ -2,104 +2,110 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MITSUBACHIに出来る事｜株式会社MITSUBACHI</title>
-<meta name="description" content="新品・中古工作機械の販売・買取、金属加工、スマート工場・FA化、クーラント清掃、補助金申請サポート。東大阪の機械商社 MITSUBACHIのサービス一覧です。">
+<meta name="description" content="新品・中古機械の売買、金属加工、スマート工場・FA化、クーラント清掃、補助金相談。MITSUBACHIにできることのご案内。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html">
-      <svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true">
-        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="#E8A13D" stroke-width="2.5"/>
-        <ellipse cx="18" cy="17" rx="6" ry="3.6" fill="#FBEED7" stroke="#2B4C6F" stroke-width="1.5" transform="rotate(-25 18 17)"/>
-        <ellipse cx="30" cy="16" rx="6" ry="3.6" fill="#FBEED7" stroke="#2B4C6F" stroke-width="1.5" transform="rotate(20 30 16)"/>
-        <ellipse cx="24" cy="29" rx="8.5" ry="10.5" fill="#F2C94C" stroke="#2B4C6F" stroke-width="2"/>
-        <path d="M17 25 h14 M16 30 h16 M18 35 h12" stroke="#2B4C6F" stroke-width="2.2" stroke-linecap="round"/>
-      </svg>
-      <span class="brand-text">MITSUBACHI<span class="brand-sub">株式会社MITSUBACHI</span></span>
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="メニュー">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
-    <nav class="site-nav" id="siteNav">
-      <a href="index.html">トップ</a>
-      <a href="services.html" class="active">MITSUBACHIに出来る事</a>
-      <a href="company.html">会社概要</a>
-      <a href="news.html">新着情報</a>
-      <a href="contact.html" class="nav-cta">お問い合わせ</a>
-    </nav>
+<header class="hd">
+  <a class="hd_logo" href="index.html"><span class="en">MITSUBACHI</span><span class="ja">産業機械・工作機械専門商社</span></a>
+  <nav class="gnav" aria-label="メインメニュー">
+    <a href="services.html">サービス</a>
+    <a href="index.html#about">MITSUBACHIについて</a>
+    <a href="company.html">会社概要</a>
+    <a href="news.html">新着情報</a>
+  </nav>
+  <div class="hd_right">
+    <a class="hd_tel" href="tel:0667551184">06-7655-1184<small>月〜土 9:00〜18:00</small></a>
+    <a class="hd_cta" href="contact.html">お問い合わせ</a>
+    <button class="burger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
   </div>
 </header>
+<nav class="drawer" id="drawer">
+  <a href="index.html"><span class="en">TOP</span><span class="ja">トップ</span></a>
+  <a href="services.html"><span class="en">SERVICE</span><span class="ja">MITSUBACHIに出来る事</span></a>
+  <a href="company.html"><span class="en">COMPANY</span><span class="ja">会社概要</span></a>
+  <a href="news.html"><span class="en">NEWS</span><span class="ja">新着情報</span></a>
+  <a class="d_cta" href="contact.html">お問い合わせ</a>
+</nav>
 
-<main>
+<section class="pghero">
+  <div class="patbg pat"></div>
+  <div class="inner">
+    <p class="en">Service</p>
+    <h1 class="ja">MITSUBACHIに出来る事</h1>
+  </div>
+</section>
 
-<div class="page-head">
-  <span class="en">SERVICE</span>
-  <h1>MITSUBACHIに出来る事</h1>
-  <p>機械の売り買いから工場のこれからまで、まとめて相談できます</p>
-</div>
+<!-- DECO-024 alternating blocks with tag pills -->
+<section class="svc">
+  <div class="inner">
 
-<section class="section">
-  <div class="container" style="max-width:860px;">
-
-    <div class="service-block">
-      <div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5v8l-9 5-9-5V8"/></svg></div>
-      <div>
-        <span class="tag-pill tag-pill-honey">販売</span>
-        <h3>新品工作機械・産業機械の販売</h3>
-        <p>マシニングセンターをはじめとする工作機械・産業機械を、用途・加工内容・予算に合わせてご提案します。機械選びの段階から相談できるので、「何を買えばいいか決まっていない」状態でも大丈夫です。</p>
+    <div class="blk" id="buy">
+      <div class="img pat"><span class="word">NEW MACHINE</span></div>
+      <div class="txt">
+        <span class="tagpill">導入したい</span>
+        <h2 class="svclogo"><span class="en">Service 01</span>新品機械の購入</h2>
+        <p class="p">旋盤・マシニングセンタなどの工作機械から周辺装置まで、メーカーを横断して比較・ご提案します。</p>
+        <p class="p">「この加工にはどの一台が合うか」から一緒に検討できます。</p>
+        <div class="rowbtn"><a class="pillbtn" href="contact.html">購入の相談をする</a></div>
       </div>
     </div>
 
-    <div class="service-block">
-      <div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.2L3 16M3 21v-5h5"/></svg></div>
-      <div>
-        <span class="tag-pill tag-pill-ai">買取・販売</span>
-        <h3>中古機械の買取・販売</h3>
-        <p>使わなくなった機械の買取と、中古機械の販売を行います。入替え・工場の整理・事業承継にともなう設備の見直しなど、まずは状況をお聴かせください。</p>
-        <span class="note">古物商認可：大阪府公安委員会 第6221R065306号</span>
+    <div class="blk rev" id="used">
+      <div class="img pat"><span class="word">USED / TRADE-IN</span></div>
+      <div class="txt">
+        <span class="tagpill">売りたい・買いたい</span>
+        <h2 class="svclogo"><span class="en">Service 02</span>中古機械の買取・販売</h2>
+        <p class="p">使わなくなった機械の買取から、状態の良い中古機のご提案まで。入れ替え・工場移転にともなう一括整理もご相談いただけます。</p>
+        <p class="p">古物商認可（大阪府公安委員会 第6221R065306号）</p>
+        <div class="rowbtn"><a class="pillbtn" href="contact.html">買取・販売の相談をする</a></div>
       </div>
     </div>
 
-    <div class="service-block">
-      <div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
-      <div>
-        <span class="tag-pill tag-pill-green">加工</span>
-        <h3>各種金属加工・精密機械加工</h3>
-        <p>半導体製造装置部品の加工を手がける関連会社・株式会社エイエルアイと連携し、各種金属加工・精密機械加工全般をお受けします。図面があれば見積もりからご案内します。</p>
+    <div class="blk" id="metal">
+      <div class="img pat"><span class="word">MACHINING</span></div>
+      <div class="txt">
+        <span class="tagpill">加工したい</span>
+        <h2 class="svclogo"><span class="en">Service 03</span>金属加工の依頼</h2>
+        <p class="p">試作から量産まで、東大阪の加工ネットワークと関連会社エイエルアイ（半導体製造装置部品の精密機械加工）の技術で対応します。</p>
+        <p class="p">図面一枚からご相談ください。</p>
+        <div class="rowbtn"><a class="pillbtn" href="contact.html">加工の相談をする</a></div>
       </div>
     </div>
 
-    <div class="service-block">
-      <div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l6 4V9l6 4V9l6 4v8H3z"/><path d="M8 17h.01M13 17h.01M18 17h.01"/></svg></div>
-      <div>
-        <span class="tag-pill tag-pill-ai">FA化</span>
-        <h3>スマート工場の提案・設計 / 工作機械のFA化</h3>
-        <p>省人化や生産性向上に向けた自動化・FA化をご提案します。いきなり大がかりな投資ではなく、今の設備と人員に合わせた段階的な進め方を一緒に考えます。</p>
+    <div class="blk rev" id="smart">
+      <div class="img pat"><span class="word">SMART FACTORY</span></div>
+      <div class="txt">
+        <span class="tagpill">工場を変えたい</span>
+        <h2 class="svclogo"><span class="en">Service 04</span>スマート工場・FA化</h2>
+        <p class="p">省人化・自動化・データ活用など、工場の「これから」を現場目線で設計。小さく始めて大きく育てる進め方をご提案します。</p>
+        <div class="rowbtn"><a class="pillbtn" href="contact.html">FA化の相談をする</a></div>
       </div>
     </div>
 
-    <div class="service-block">
-      <div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.3 6 11a6 6 0 0 1-12 0c0-4.7 6-11 6-11z"/><path d="M9.5 13.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
-      <div>
-        <span class="tag-pill tag-pill-shu">清掃</span>
-        <h3>マシニングセンターのクーラント清掃</h3>
-        <p>クーラントタンクの汚れは、加工精度や工具寿命に影響します。定期的なクーラント清掃で、機械の調子を良い状態に保ちます。</p>
+    <div class="blk" id="coolant">
+      <div class="img pat"><span class="word">COOLANT</span></div>
+      <div class="txt">
+        <span class="tagpill">メンテナンス</span>
+        <h2 class="svclogo"><span class="en">Service 05</span>クーラント清掃</h2>
+        <p class="p">クーラントタンクの清掃・液の入れ替えで、加工精度と機械寿命を維持。定期メンテナンスとしてもご利用いただけます。</p>
+        <div class="rowbtn"><a class="pillbtn" href="contact.html">清掃の相談をする</a></div>
       </div>
     </div>
 
-    <div class="service-block">
-      <div class="icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 14l2 2 4-4"/></svg></div>
-      <div>
-        <span class="tag-pill tag-pill-green">補助金</span>
-        <h3>補助金の申請サポート</h3>
-        <p>設備導入に使える補助金の情報提供と、申請のサポートを行います。機械の購入計画とセットでご相談いただけます。</p>
+    <div class="blk rev" id="subsidy">
+      <div class="img pat"><span class="word">SUBSIDY</span></div>
+      <div class="txt">
+        <span class="tagpill">コストを抑えたい</span>
+        <h2 class="svclogo"><span class="en">Service 06</span>補助金の相談</h2>
+        <p class="p">ものづくり補助金・事業再構築補助金など、設備導入に使える制度の情報提供と申請の流れをご案内します。</p>
+        <div class="rowbtn"><a class="pillbtn" href="contact.html">補助金の相談をする</a></div>
       </div>
     </div>
 
@@ -107,70 +113,61 @@
 </section>
 
 <!-- FAQ -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-head">
-      <span class="en">FAQ</span>
-      <h2>よくあるご質問</h2>
-    </div>
-    <div class="faq-list">
-      <details>
-        <summary><span class="faq-q-label">Q</span>機械の機種・メーカーがバラバラでも対応できますか？</summary>
-        <div class="faq-body">はい。特定のメーカーや機種に限らず、工作機械・産業機械全般に対応しています。まずはお気軽にお問い合わせください。</div>
-      </details>
-      <details>
-        <summary><span class="faq-q-label">Q</span>1台からでも買取・販売に対応してもらえますか？</summary>
-        <div class="faq-body">もちろんです。1台単位から小回りよく対応します。複数台まとめての場合もお気軽にどうぞ。</div>
-      </details>
-      <details>
-        <summary><span class="faq-q-label">Q</span>加工の依頼は図面がないと難しいですか？</summary>
-        <div class="faq-body">図面があると見積もりがスムーズですが、まずはサンプル品や内容のご説明だけでも構いません。一度ヒアリングさせてください。</div>
-      </details>
-      <details>
-        <summary><span class="faq-q-label">Q</span>補助金の相談は機械を購入する前でもできますか？</summary>
-        <div class="faq-body">はい、ご相談いただけます。機械購入計画と補助金をセットで考えることで、実質負担を小さくできる場合があります。お気軽にどうぞ。</div>
-      </details>
-    </div>
+<section class="faq" id="faq">
+  <div class="inner">
+    <div class="sec-h" style="margin-bottom:30px;"><div class="en">FAQ</div><span class="ja">よくあるご質問</span></div>
+    <div class="bar"></div>
+    <details><summary><span class="q">Q</span>1台だけの相談でも大丈夫ですか？</summary><p class="a">もちろんです。台数・規模にかかわらず、まずはお気軽にご相談ください。</p></details>
+    <details><summary><span class="q">Q</span>メーカーの指定はできますか？</summary><p class="a">できます。ご指定がない場合は、用途・予算に合わせて複数メーカーを比較してご提案します。</p></details>
+    <details><summary><span class="q">Q</span>遠方でも対応してもらえますか？</summary><p class="a">内容によりますので、まずはお問い合わせフォームまたはお電話でご相談ください。</p></details>
+    <details><summary><span class="q">Q</span>見積もりは無料ですか？</summary><p class="a">はい、お見積もりは無料です。お気軽にご依頼ください。</p></details>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-band">
-  <div class="container">
-    <h2>どのサービスか決まっていなくても大丈夫です</h2>
-    <p>状況をお聴かせいただければ、こちらからご提案します。</p>
-    <div class="cta-cols">
-      <div class="cta-col">
-        <p class="cta-micro">フォームから送信・24h受付</p>
-        <a class="btn btn-primary" href="contact.html">お問い合わせフォーム</a>
-      </div>
-      <div class="cta-col">
-        <p class="cta-micro">お急ぎの方はお電話が確実です</p>
-        <a class="btn btn-tel" href="tel:0676551184">&#128222; 06-7655-1184</a>
-      </div>
-    </div>
-  </div>
+<!-- DECO-014 contact guidance block -->
+<section class="cguide">
+  <h2>サービスに関するお問い合わせ</h2>
+  <a class="cta" href="contact.html">お問い合わせフォームへ</a>
+  <p class="telnote">お電話でのご相談（月〜土 9:00〜18:00・祝祭日除く）</p>
+  <a class="tel" href="tel:0667551184">06-7655-1184</a>
+  <p class="note">会社については<a href="company.html">会社概要</a>をご覧ください。</p>
 </section>
 
-</main>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand">株式会社MITSUBACHI</div>
-      <p>産業機械・工作機械の専門商社<br>大阪府東大阪市中新開1丁目4番8号<br>TEL: 06-7655-1184<br>古物商認可：大阪府公安委員会 第6221R065306号</p>
+<div class="dark">
+  <footer class="footer">
+    <div class="cols">
+      <div class="flogo">
+        <p class="en">MITSUBACHI</p>
+        <p class="ja">株式会社MITSUBACHI</p>
+        <p class="adr">大阪府東大阪市中新開1丁目4番8号<br>TEL 06-7655-1184<br>月〜土 9:00〜18:00（祝祭日除く）</p>
+      </div>
+      <div class="col">
+        <p class="head">MENU</p>
+        <a href="index.html">トップ</a>
+        <a href="services.html">MITSUBACHIに出来る事</a>
+        <a href="company.html">会社概要</a>
+        <a href="news.html">新着情報</a>
+      </div>
+      <div class="col">
+        <p class="head">SERVICE</p>
+        <a href="services.html#buy">新品機械の購入</a>
+        <a href="services.html#used">中古機械の買取・販売</a>
+        <a href="services.html#metal">金属加工の依頼</a>
+        <a href="services.html#smart">スマート工場・FA化</a>
+      </div>
+      <div class="col">
+        <p class="head">CONTACT</p>
+        <a href="contact.html">お問い合わせフォーム</a>
+        <a href="tel:0667551184">06-7655-1184</a>
+        <a href="https://www.instagram.com/yuika.yamaue/" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
-    <nav class="footer-nav" aria-label="フッター">
-      <a href="index.html">トップ</a>
-      <a href="services.html">MITSUBACHIに出来る事</a>
-      <a href="company.html">会社概要・代表挨拶</a>
-      <a href="news.html">新着情報</a>
-      <a href="contact.html">お問い合わせ</a>
-      <a href="https://www.instagram.com/yuika.yamaue/" target="_blank" rel="noopener">Instagram</a>
-    </nav>
-  </div>
-  <div class="footer-copy">&copy; <span id="year"></span> MITSUBACHI Co., Ltd.</div>
-</footer>
+    <div class="copyrow">
+      <span>© MITSUBACHI Co., Ltd.</span>
+      <span>古物商認可 大阪府公安委員会 第6221R065306号</span>
+    </div>
+  </footer>
+</div>
 
 <script src="js/main.js"></script>
 </body>

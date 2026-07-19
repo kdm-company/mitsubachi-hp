@@ -2,315 +2,216 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>株式会社MITSUBACHI｜東大阪の産業機械・工作機械専門商社</title>
-<meta name="description" content="株式会社MITSUBACHI（ミツバチ）は大阪・東大阪の産業機械・工作機械専門商社です。">
+<meta name="description" content="株式会社MITSUBACHIは東大阪の産業機械・工作機械専門商社。新品・中古機械の売買、金属加工、スマート工場化、補助金相談まで、機械のことをまるごとご相談いただけます。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html">
-      <svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true">
-        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="#E8A13D" stroke-width="2.5"/>
-        <ellipse cx="18" cy="17" rx="6" ry="3.6" fill="#FBEED7" stroke="#2B4C6F" stroke-width="1.5" transform="rotate(-25 18 17)"/>
-        <ellipse cx="30" cy="16" rx="6" ry="3.6" fill="#FBEED7" stroke="#2B4C6F" stroke-width="1.5" transform="rotate(20 30 16)"/>
-        <ellipse cx="24" cy="29" rx="8.5" ry="10.5" fill="#F2C94C" stroke="#2B4C6F" stroke-width="2"/>
-        <path d="M17 25 h14 M16 30 h16 M18 35 h12" stroke="#2B4C6F" stroke-width="2.2" stroke-linecap="round"/>
-      </svg>
-      <span class="brand-text">MITSUBACHI<span class="brand-sub">株式会社MITSUBACHI</span></span>
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="メニュー">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
-    <nav class="site-nav" id="siteNav">
-      <a href="index.html" class="active">トップ</a>
-      <a href="services.html">MITSUBACHIに出来る事</a>
-      <a href="company.html">会社概要</a>
-      <a href="news.html">新着情報</a>
-      <a href="contact.html" class="nav-cta">お問い合わせ</a>
-    </nav>
+<!-- header: logo + PC nav + tel + CTA / SP burger drawer -->
+<header class="hd">
+  <a class="hd_logo" href="index.html">
+    <span class="en">MITSUBACHI</span>
+    <span class="ja">産業機械・工作機械専門商社</span>
+  </a>
+  <nav class="gnav" aria-label="メインメニュー">
+    <a href="services.html">サービス</a>
+    <a href="index.html#about">MITSUBACHIについて</a>
+    <a href="company.html">会社概要</a>
+    <a href="news.html">新着情報</a>
+  </nav>
+  <div class="hd_right">
+    <a class="hd_tel" href="tel:0667551184">06-7655-1184<small>月〜土 9:00〜18:00</small></a>
+    <a class="hd_cta" href="contact.html">お問い合わせ</a>
+    <button class="burger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
   </div>
 </header>
+<nav class="drawer" id="drawer">
+  <a href="index.html"><span class="en">TOP</span><span class="ja">トップ</span></a>
+  <a href="services.html"><span class="en">SERVICE</span><span class="ja">MITSUBACHIに出来る事</span></a>
+  <a href="company.html"><span class="en">COMPANY</span><span class="ja">会社概要</span></a>
+  <a href="news.html"><span class="en">NEWS</span><span class="ja">新着情報</span></a>
+  <a class="d_cta" href="contact.html">お問い合わせ</a>
+</nav>
 
-<main>
+<!-- MV (LAYOUT-014: full-screen kenburns + right copy + scroll indicator) -->
+<section class="mv">
+  <div class="mv_bg" role="img" aria-label="自然光の入る倉庫に工作機械が並ぶ作業場"></div>
+  <div class="mv_copy">
+    <p class="en">MACHINERY TRADING COMPANY</p>
+    <h1 class="big">機械のことは、<br><span class="nw">ぜんぶMITSUBACHIへ。</span></h1>
+    <p class="sub">東大阪の産業機械・工作機械専門商社</p>
+    <div class="mv_btns">
+      <a class="btn" href="contact.html">機械・加工について相談する</a>
+      <a class="btn gh w" href="#service">MITSUBACHIにできること</a>
+    </div>
+  </div>
+  <div class="mv_scroll"><span class="t">SCROLL</span><span class="line"></span></div>
+</section>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <span class="hero-tag">東大阪の機械商社</span>
-      <h1>その機械の“次”を、<br>いっしょに考える。</h1>
-      <p class="hero-lead">株式会社MITSUBACHIは、大阪・東大阪の産業機械・工作機械の専門商社です。新品・中古の販売から、加工、工場づくり、補助金のご相談まで。工場を受け継いだ世代の相談役として、小回りよく動きます。</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="contact.html">お問い合わせ</a>
-        <a class="btn btn-outline" href="services.html">出来る事を見る</a>
+<!-- three strengths: always visible 3-column -->
+<section class="axis">
+  <div class="inner">
+    <div class="sec-h"><div class="en">Our Strengths</div><span class="ja">MITSUBACHIの3つの強み</span></div>
+    <div class="axis_grid">
+      <div class="axis_item">
+        <p class="num">01</p>
+        <h3>どんな相談も、ひとつの窓口で</h3>
+        <p class="en">ONE-STOP</p>
+        <p class="a_body">機械の販売・買取から金属加工、FA化、補助金の相談まで。「これはどこに頼めば？」を、MITSUBACHIへの一本の連絡で完結させます。</p>
+        <p class="a_note">新品・中古売買／金属加工／FA化／補助金に一括対応</p>
       </div>
-      <div class="hero-badges">
-        <span class="hero-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>古物商認可取得済</span>
-        <span class="hero-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>エイエルアイ連携</span>
-        <span class="hero-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>東大阪拠点</span>
+      <div class="axis_item">
+        <p class="num">02</p>
+        <h3>現場を理解した、距離の近い提案</h3>
+        <p class="en">ON-SITE</p>
+        <p class="a_body">カタログスペックだけではわからない「現場で使える一台」を見極めて提案。東大阪を拠点に、製造業の現場へ近い距離で対応します。</p>
+        <p class="a_note">拠点：大阪府東大阪市中新開（現場への駆けつけが早い）</p>
+      </div>
+      <div class="axis_item">
+        <p class="num">03</p>
+        <h3>加工・生産技術まで踏み込む</h3>
+        <p class="en">ENGINEERING</p>
+        <p class="a_body">関連会社や東大阪の加工ネットワークと連携。機械を売るだけでなく、加工方法や生産技術まで踏み込んで提案します。</p>
+        <p class="a_note">関連会社：株式会社エイエルアイ（精密機械加工）と連携</p>
       </div>
     </div>
-    <div class="hero-visual">
-      <svg viewBox="0 0 520 420" role="img" aria-label="ミツバチと草花のやわらかなイラスト">
-        <ellipse cx="265" cy="235" rx="235" ry="170" fill="#FBEED7"/>
-        <g fill="none" stroke="#E8A13D" stroke-width="3" opacity="0.55">
-          <polygon points="438,96 468,113 468,147 438,164 408,147 408,113"/>
-          <polygon points="388,42 412,56 412,84 388,98 364,84 364,56"/>
-          <polygon points="466,190 486,202 486,226 466,238 446,226 446,202"/>
-        </g>
-        <g stroke="#6E8F6E" stroke-width="5" fill="none" stroke-linecap="round">
-          <path d="M110 372 C 106 300, 122 262, 116 208"/>
-          <path d="M168 372 C 172 316, 158 286, 166 240"/>
-          <path d="M395 372 C 400 330, 388 306, 394 272"/>
-        </g>
-        <g fill="#6E8F6E">
-          <ellipse cx="96" cy="264" rx="20" ry="9" transform="rotate(-32 96 264)"/>
-          <ellipse cx="138" cy="300" rx="20" ry="9" transform="rotate(28 138 300)"/>
-          <ellipse cx="186" cy="286" rx="17" ry="8" transform="rotate(-24 186 286)"/>
-          <ellipse cx="376" cy="316" rx="16" ry="7" transform="rotate(-30 376 316)"/>
-          <ellipse cx="414" cy="336" rx="16" ry="7" transform="rotate(26 414 336)"/>
-        </g>
-        <g>
-          <circle cx="116" cy="192" r="13" fill="#D65F3B"/>
-          <circle cx="104" cy="178" r="13" fill="#D65F3B"/>
-          <circle cx="130" cy="178" r="13" fill="#D65F3B"/>
-          <circle cx="117" cy="170" r="13" fill="#E06A46"/>
-          <circle cx="117" cy="181" r="7" fill="#F2C94C"/>
-          <circle cx="166" cy="228" r="10" fill="#D65F3B"/>
-          <circle cx="157" cy="217" r="10" fill="#E06A46"/>
-          <circle cx="176" cy="217" r="10" fill="#D65F3B"/>
-          <circle cx="166" cy="220" r="5.5" fill="#F2C94C"/>
-        </g>
-        <g transform="translate(268 148) rotate(12)">
-          <ellipse cx="-14" cy="-22" rx="17" ry="9" fill="#FFFFFF" stroke="#2B4C6F" stroke-width="2.5" transform="rotate(-30 -14 -22)" opacity="0.92"/>
-          <ellipse cx="16" cy="-24" rx="17" ry="9" fill="#FFFFFF" stroke="#2B4C6F" stroke-width="2.5" transform="rotate(24 16 -24)" opacity="0.92"/>
-          <ellipse cx="0" cy="2" rx="25" ry="19" fill="#F2C94C" stroke="#2B4C6F" stroke-width="3"/>
-          <path d="M-11 -12 q 2 14 0 27 M1 -15 q 2 16 0 33 M13 -12 q 2 14 0 26" stroke="#2B4C6F" stroke-width="4" stroke-linecap="round" fill="none"/>
-          <circle cx="-24" cy="-6" r="3" fill="#2B4C6F"/>
-        </g>
-      </svg>
+    <div class="axis_cta"><a class="tlink" href="company.html">MITSUBACHIについて詳しく</a></div>
+  </div>
+</section>
+
+<!-- services: priority cards (主力3 + 補助2) -->
+<section class="treat" id="service">
+  <div class="inner">
+    <div class="treat_head">
+      <div class="sec-h"><div class="en">Service</div><span class="ja">MITSUBACHIに出来る事</span></div>
+      <div class="treat_lead">
+        <p>機械の売買から加工、工場づくり、補助金まで。<br class="br-pc">窓口はひとつ、対応はまるごと。<br class="br-pc">まずは気軽にご相談ください。</p>
+      </div>
+    </div>
+    <div class="svc_main">
+      <a class="tcard" href="services.html#buy">
+        <span class="s_num">01</span>
+        <span class="s_name">新品・中古機械の販売・買取</span>
+        <span class="s_desc">メーカー横断の新品提案から、古物商認可済みの中古売買まで。入れ替え・移転にも対応します。</span>
+        <span class="s_arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="tcard" href="services.html#metal">
+        <span class="s_num">02</span>
+        <span class="s_name">金属加工</span>
+        <span class="s_desc">試作から量産まで。関連会社・東大阪の加工ネットワークと連携し、図面一枚から対応します。</span>
+        <span class="s_arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="tcard" href="services.html#smart">
+        <span class="s_num">03</span>
+        <span class="s_name">スマート工場・FA化</span>
+        <span class="s_desc">省人化・自動化・データ活用を現場目線で設計。小さく始めて大きく育てる進め方を提案します。</span>
+        <span class="s_arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <div class="svc_sub">
+      <a class="tcard sm" href="services.html#coolant">
+        <span class="s_body"><span class="s_name">クーラント清掃</span><span class="s_desc">加工精度と機械寿命を守る定期メンテナンス</span></span>
+        <span class="s_arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="tcard sm" href="services.html#subsidy">
+        <span class="s_body"><span class="s_name">補助金の相談</span><span class="s_desc">設備導入のコストを抑える制度活用をご案内</span></span>
+        <span class="s_arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <div class="treat_cta"><a class="btn gh" href="services.html">サービス一覧へ</a></div>
+  </div>
+</section>
+
+<!-- LAYOUT-014 product section: offset band 2col -> about -->
+<section class="product" id="about">
+  <div class="inner prod_flex">
+    <div class="prod_img" role="img" aria-label="工作機械が並ぶ作業場"></div>
+    <div class="prod_txt">
+      <div class="sec-h"><div class="en">About Us</div><span class="ja">MITSUBACHIについて</span></div>
+      <p class="bigcopy">現場を知っているから、<br>売って終わりにしない。</p>
+      <p class="body">MITSUBACHIは、ものづくりの街・東大阪に<br class="br-pc">拠点を置く機械専門商社です。</p>
+      <div class="li"><span class="dot"></span><span>大阪府東大阪市中新開に拠点。現場への駆けつけが早い</span></div>
+      <div class="li"><span class="dot"></span><span>関連会社エイエルアイの精密機械加工と連携した技術提案</span></div>
+      <div class="li"><span class="dot"></span><span>古物商認可（大阪府公安委員会 第6221R065306号）</span></div>
+      <a class="btn gh" href="company.html">会社概要を見る</a>
     </div>
   </div>
 </section>
 
-<!-- お悩みチェックリスト (クラプロ型) -->
-<section class="worry-section">
-  <div class="container">
-    <div class="section-head">
-      <span class="en">WORRY</span>
-      <h2>こんなお悩みありませんか？</h2>
-    </div>
-    <div class="check-grid">
-      <div class="check-item">機械を入れ替えたいが、何を買えばいいかわからない</div>
-      <div class="check-item">使わなくなった機械が工場に眠っている</div>
-      <div class="check-item">先代から工場を受け継いだ、設備をどうするか悩んでいる</div>
-      <div class="check-item">補助金を活用したいが、手続きがよくわからない</div>
-      <div class="check-item">クーラント清掃や加工をどこに頼めばいいか不明</div>
-      <div class="check-item">スマート工場・FA化に興味があるが、何から始めればいいか不明</div>
-    </div>
-    <div class="worry-arrow">&#8659;</div>
-    <div class="solution-band">
-      <div class="solution-band-text">
-        <h3>そのお悩み、MITSUBACHIがまるごと相談に乗ります</h3>
-        <p>「これって売れる？」「いくらかかる？」の段階からどうぞ。</p>
-      </div>
-      <a class="btn btn-primary" href="contact.html">はじめの相談はこちら</a>
+<!-- LAYOUT-014 recruit-style photo band -> company message -->
+<section class="band">
+  <div class="inner band_flex">
+    <div class="band_img"><span class="word">HIGASHI-OSAKA</span></div>
+    <div class="band_txt">
+      <div class="sec-h white"><div class="en">Message</div><span class="ja">代表メッセージ</span></div>
+      <p class="copy">働きバチのように、<br>現場と現場をつなぎ続ける。</p>
+      <p class="body">社名のMITSUBACHIには、工場と工場、人と技術の間を飛び回り、<br class="br-pc">実りを運ぶ存在でありたいという思いを込めています。</p>
+      <a class="btn gh w" href="company.html#message">メッセージを読む</a>
     </div>
   </div>
 </section>
 
-<!-- SERVICE -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <span class="en">SERVICE</span>
-      <h2>MITSUBACHIに出来る事</h2>
-      <p>機械の売り買いから工場のこれからまで、まとめて相談できます</p>
-    </div>
-    <div class="card-grid">
-      <div class="card">
-        <span class="tag-pill tag-pill-honey">販売</span>
-        <div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5v8l-9 5-9-5V8"/></svg></div>
-        <h3>新品機械の販売</h3>
-        <p>工作機械・産業機械を、用途と予算に合わせてご提案します。</p>
-      </div>
-      <div class="card">
-        <span class="tag-pill tag-pill-ai">買取・販売</span>
-        <div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.2L3 16M3 21v-5h5"/></svg></div>
-        <h3>中古機械の買取・販売</h3>
-        <p>使わなくなった機械の買取から、中古機の調達まで対応します。</p>
-      </div>
-      <div class="card">
-        <span class="tag-pill tag-pill-green">加工</span>
-        <div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
-        <h3>各種金属加工</h3>
-        <p>関連会社エイエルアイと連携し、精密機械加工全般をお受けします。</p>
-      </div>
-      <div class="card">
-        <span class="tag-pill tag-pill-ai">FA化</span>
-        <div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l6 4V9l6 4V9l6 4v8H3z"/><path d="M8 17h.01M13 17h.01M18 17h.01"/></svg></div>
-        <h3>スマート工場・FA化</h3>
-        <p>工作機械の自動化やスマート工場の提案・設計を行います。</p>
-      </div>
-      <div class="card">
-        <span class="tag-pill tag-pill-shu">清掃</span>
-        <div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.3 6 11a6 6 0 0 1-12 0c0-4.7 6-11 6-11z"/><path d="M9.5 13.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
-        <h3>クーラント清掃</h3>
-        <p>マシニングセンターのクーラント清掃で、機械の調子を保ちます。</p>
-      </div>
-      <div class="card">
-        <span class="tag-pill tag-pill-green">補助金</span>
-        <div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 14l2 2 4-4"/></svg></div>
-        <h3>補助金の申請サポート</h3>
-        <p>設備導入に使える補助金の情報提供と申請をサポートします。</p>
-      </div>
-    </div>
-    <div style="text-align:center; margin-top:36px;">
-      <a class="btn btn-outline" href="services.html">すべてのサービスを見る</a>
-    </div>
+<!-- DECO-011 news row list -->
+<section class="news">
+  <div class="inner">
+    <div class="sec-h"><div class="en">News</div><span class="ja">新着情報</span></div>
+    <div class="bar"></div>
+    <a class="row" href="news.html"><span class="date">2026.07.01</span><span class="cat">お知らせ</span><span class="ttl">ホームページをリニューアルしました</span></a>
+    <a class="row" href="news.html"><span class="date">2026.06.15</span><span class="cat honey">note</span><span class="ttl">note連携の準備を進めています。現場のこぼれ話をお届け予定です</span></a>
+    <a class="row" href="news.html"><span class="date">2026.06.01</span><span class="cat">お知らせ</span><span class="ttl">中古機械の買取強化中。入れ替え・移転のご相談はお早めに</span></a>
+    <div class="more"><a class="tlink" href="news.html">ニュース一覧へ</a></div>
   </div>
 </section>
 
-<!-- ご相談の流れ (Diggle型) -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-head">
-      <span class="en">FLOW</span>
-      <h2>ご相談の流れ</h2>
-      <p>ご連絡からお届けまで、一気通貫で対応します</p>
-    </div>
-    <div class="flow-list">
-      <div class="flow-item">
-        <div class="flow-num">STEP<span>1</span></div>
-        <h4>お問い合わせ</h4>
-        <p>フォームまたはお電話でご連絡ください。はじめての方も大歓迎です。</p>
+<!-- LAYOUT-010 dark CONTACT + large footer -->
+<div class="dark">
+  <section class="contactband">
+    <div class="patbg pat"></div>
+    <p class="sub">Contact</p>
+    <h2 class="big2">機械・加工・工場の課題を<br class="br-sp">ご相談ください</h2>
+    <p class="p">機械の購入・売却、金属加工、設備の自動化、補助金活用まで、<br class="br-pc">内容が固まっていない段階でもご相談いただけます。</p>
+    <a class="btn" href="contact.html">お問い合わせはこちら</a>
+    <a class="cb_tel" href="tel:0667551184">06-7655-1184<small>月〜土 9:00〜18:00（祝祭日除く）</small></a>
+  </section>
+  <footer class="footer">
+    <div class="cols">
+      <div class="flogo">
+        <p class="en">MITSUBACHI</p>
+        <p class="ja">株式会社MITSUBACHI</p>
+        <p class="adr">大阪府東大阪市中新開1丁目4番8号<br>TEL 06-7655-1184<br>月〜土 9:00〜18:00（祝祭日除く）</p>
       </div>
-      <div class="flow-item">
-        <div class="flow-num">STEP<span>2</span></div>
-        <h4>ヒアリング</h4>
-        <p>現状や課題をお聴きして、適切なサービスを一緒に整理します。</p>
+      <div class="col">
+        <p class="head">MENU</p>
+        <a href="index.html">トップ</a>
+        <a href="services.html">MITSUBACHIに出来る事</a>
+        <a href="company.html">会社概要</a>
+        <a href="news.html">新着情報</a>
       </div>
-      <div class="flow-item">
-        <div class="flow-num">STEP<span>3</span></div>
-        <h4>プランご提案</h4>
-        <p>機械の選定・見積もり・補助金情報などをためてご提案します。</p>
+      <div class="col">
+        <p class="head">SERVICE</p>
+        <a href="services.html#buy">新品機械の購入</a>
+        <a href="services.html#used">中古機械の買取・販売</a>
+        <a href="services.html#metal">金属加工の依頼</a>
+        <a href="services.html#smart">スマート工場・FA化</a>
       </div>
-      <div class="flow-item">
-        <div class="flow-num">STEP<span>4</span></div>
-        <h4>対応・アフター</h4>
-        <p>入荷・設置・なにかあれば納品まで、責任をもって対応します。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section">
-  <div class="container">
-    <div class="about-teaser">
-      <div>
-        <span class="en" style="color:var(--honey-deep); font-size:13px; font-weight:700; letter-spacing:0.2em;">ABOUT</span>
-        <h2>加工の現場と直接つながる商社です</h2>
-        <p>MITSUBACHIは、半導体製造装置部品の加工を手がける株式会社エイエルアイの関連会社です。機械を使う側の感覚をもって、販売だけで終わらないご提案をします。</p>
-        <p>拠点は大阪・東大阪。先代から工場を受け継いだ方の「この機械、どうする？」に、同じ目線で向き合います。</p>
-        <div class="badge-row">
-          <span class="badge">東大阪拠点</span>
-          <span class="badge">エイエルアイと連携</span>
-          <span class="badge">古物商認可取得済</span>
-        </div>
-        <a class="btn btn-outline" href="company.html">会社概要を見る</a>
-      </div>
-      <div>
-        <svg viewBox="0 0 440 320" role="img" aria-label="六角形と葉のモチーフ">
-          <rect x="0" y="0" width="440" height="320" rx="16" fill="#FBF7EF"/>
-          <g fill="none" stroke="#E8A13D" stroke-width="3">
-            <polygon points="220,60 268,88 268,144 220,172 172,144 172,88" opacity="0.85"/>
-            <polygon points="310,112 350,135 350,181 310,204 270,181 270,135" opacity="0.5"/>
-            <polygon points="130,112 170,135 170,181 130,204 90,181 90,135" opacity="0.5"/>
-          </g>
-          <g stroke="#6E8F6E" stroke-width="4" fill="none" stroke-linecap="round">
-            <path d="M60 280 C 58 240, 68 220, 64 190"/>
-            <path d="M388 280 C 392 246, 382 228, 388 200"/>
-          </g>
-          <g fill="#6E8F6E">
-            <ellipse cx="52" cy="222" rx="14" ry="6" transform="rotate(-30 52 222)"/>
-            <ellipse cx="78" cy="248" rx="14" ry="6" transform="rotate(26 78 248)"/>
-            <ellipse cx="378" cy="236" rx="12" ry="5.5" transform="rotate(-28 378 236)"/>
-          </g>
-          <circle cx="220" cy="116" r="14" fill="#F2C94C"/>
-          <circle cx="220" cy="116" r="6" fill="#D65F3B"/>
-        </svg>
+      <div class="col">
+        <p class="head">CONTACT</p>
+        <a href="contact.html">お問い合わせフォーム</a>
+        <a href="tel:0667551184">06-7655-1184</a>
+        <a href="https://www.instagram.com/yuika.yamaue/" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- NEWS -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-head">
-      <span class="en">NEWS</span>
-      <h2>新着情報</h2>
-      <p>noteの最新記事を自動で掲載します</p>
+    <div class="copyrow">
+      <span>© MITSUBACHI Co., Ltd.</span>
+      <span>古物商認可 大阪府公安委員会 第6221R065306号</span>
     </div>
-    <div class="news-list" id="note-feed">
-      <div class="news-item">
-        <span class="label">準備中</span>
-        <span class="title">note連携の準備中です。公開後、最新記事がここに並びます。</span>
-      </div>
-    </div>
-    <div style="text-align:center; margin-top:28px;">
-      <a class="btn btn-outline" href="news.html">新着情報をもっと見る</a>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-band">
-  <div class="container">
-    <h2>機械のこと、まずは気軽にご相談ください</h2>
-    <p>「これって売れる？」「いくらかかる？」の段階からどうぞ。</p>
-    <div class="cta-cols">
-      <div class="cta-col">
-        <p class="cta-micro">フォームから送信・24h受付</p>
-        <a class="btn btn-primary" href="contact.html">お問い合わせフォーム</a>
-      </div>
-      <div class="cta-col">
-        <p class="cta-micro">お急ぎの方はお電話が確実です</p>
-        <a class="btn btn-tel" href="tel:0676551184">&#128222; 06-7655-1184</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand">株式会社MITSUBACHI</div>
-      <p>産業機械・工作機械の専門商社<br>
-      大阪府東大阪市中新開1丁目4番8号<br>
-      TEL: 06-7655-1184<br>
-      古物商認可：大阪府公安委員会 第6221R065306号</p>
-    </div>
-    <nav class="footer-nav" aria-label="フッター">
-      <a href="index.html">トップ</a>
-      <a href="services.html">MITSUBACHIに出来る事</a>
-      <a href="company.html">会社概要・代表挨拶</a>
-      <a href="news.html">新着情報</a>
-      <a href="contact.html">お問い合わせ</a>
-      <a href="https://www.instagram.com/yuika.yamaue/" target="_blank" rel="noopener">Instagram</a>
-    </nav>
-  </div>
-  <div class="footer-copy">&copy; <span id="year"></span> MITSUBACHI Co., Ltd.</div>
-</footer>
+  </footer>
+</div>
 
 <script src="js/main.js"></script>
 </body>

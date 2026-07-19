@@ -2,135 +2,127 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>会社概要｜株式会社MITSUBACHI</title>
-<meta name="description" content="株式会社MITSUBACHIの会社概要・代表挨拶。大阪・東大阪の産業機械商社。">
+<meta name="description" content="株式会社MITSUBACHIの会社概要。代表メッセージ、会社情報、関連会社のご案内。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html">
-      <svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true">
-        <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="none" stroke="#E8A13D" stroke-width="2.5"/>
-        <ellipse cx="18" cy="17" rx="6" ry="3.6" fill="#FBEED7" stroke="#2B4C6F" stroke-width="1.5" transform="rotate(-25 18 17)"/>
-        <ellipse cx="30" cy="16" rx="6" ry="3.6" fill="#FBEED7" stroke="#2B4C6F" stroke-width="1.5" transform="rotate(20 30 16)"/>
-        <ellipse cx="24" cy="29" rx="8.5" ry="10.5" fill="#F2C94C" stroke="#2B4C6F" stroke-width="2"/>
-        <path d="M17 25 h14 M16 30 h16 M18 35 h12" stroke="#2B4C6F" stroke-width="2.2" stroke-linecap="round"/>
-      </svg>
-      <span class="brand-text">MITSUBACHI<span class="brand-sub">株式会社MITSUBACHI</span></span>
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="メニュー">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
-    <nav class="site-nav" id="siteNav">
-      <a href="index.html">トップ</a>
-      <a href="services.html">MITSUBACHIに出来る事</a>
-      <a href="company.html" class="active">会社概要</a>
-      <a href="news.html">新着情報</a>
-      <a href="contact.html" class="nav-cta">お問い合わせ</a>
-    </nav>
+<header class="hd">
+  <a class="hd_logo" href="index.html"><span class="en">MITSUBACHI</span><span class="ja">産業機械・工作機械専門商社</span></a>
+  <nav class="gnav" aria-label="メインメニュー">
+    <a href="services.html">サービス</a>
+    <a href="index.html#about">MITSUBACHIについて</a>
+    <a href="company.html">会社概要</a>
+    <a href="news.html">新着情報</a>
+  </nav>
+  <div class="hd_right">
+    <a class="hd_tel" href="tel:0667551184">06-7655-1184<small>月〜土 9:00〜18:00</small></a>
+    <a class="hd_cta" href="contact.html">お問い合わせ</a>
+    <button class="burger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
   </div>
 </header>
+<nav class="drawer" id="drawer">
+  <a href="index.html"><span class="en">TOP</span><span class="ja">トップ</span></a>
+  <a href="services.html"><span class="en">SERVICE</span><span class="ja">MITSUBACHIに出来る事</span></a>
+  <a href="company.html"><span class="en">COMPANY</span><span class="ja">会社概要</span></a>
+  <a href="news.html"><span class="en">NEWS</span><span class="ja">新着情報</span></a>
+  <a class="d_cta" href="contact.html">お問い合わせ</a>
+</nav>
 
-<main>
-
-<div class="page-head">
-  <span class="en">COMPANY</span>
-  <h1>会社概要・代表挨拶</h1>
-  <p>東大阪の産業機械・工作機械専門商社</p>
-</div>
-
-<!-- 代表挨拶 -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <span class="en">MESSAGE</span>
-      <h2>代表挨拶</h2>
-    </div>
-    <div class="message-card">
-      <p>この地域の工場におつき合いしてきた山上嘉・エイエルアイでの仕事を兼ね、東大阪の製造業に特化した機械商社としてMITSUBACHIを立ち上げました。</p>
-      <p>「この機械、どうする？」——先代から工場を受け継いだ方が直面するその問いに、「売る・手放す」だけでなく、次の一歩を合わせて考える商社でありたいと思っています。</p>
-      <p>大手商社のような幅はありません。でも、小回りが利く、まず話を聴く。そんな商社でありたいと思っています。少しでもお役に立てれば幸いです。</p>
-      <div class="sign">代表取締役&nbsp;山上嘉</div>
-    </div>
+<section class="pghero">
+  <div class="patbg pat"></div>
+  <div class="inner">
+    <p class="en">Company</p>
+    <h1 class="ja">会社概要</h1>
   </div>
 </section>
 
-<!-- 会社概要 -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-head">
-      <span class="en">OVERVIEW</span>
-      <h2>会社概要</h2>
-    </div>
-    <table class="company-table">
+<!-- DECO-013 person overflow message card -->
+<section class="ceo" id="message">
+  <div class="card">
+    <p class="en">CEO MESSAGE</p>
+    <h2>働きバチのように、<br>現場と現場をつなぎ続ける。</h2>
+    <p class="body">社名のMITSUBACHIには、工場と工場、人と技術の間を飛び回り、実りを運ぶ存在でありたいという思いを込めています。機械を売って終わりではなく、導入後の運用・加工・メンテナンスまで、現場のそばで伴走し続けます。東大阪のものづくりとともに、これからも飛び回ってまいります。</p>
+    <p class="sign"><small>代表取締役</small>山上 嘉</p>
+  </div>
+  <div class="person pat"><span class="word">代表写真<br>（準備中）</span></div>
+</section>
+
+<!-- company table -->
+<section class="cmp">
+  <div class="inner">
+    <div class="sec-h"><div class="en">Profile</div><span class="ja">会社情報</span></div>
+    <table>
       <tr><th>会社名</th><td>株式会社MITSUBACHI</td></tr>
-      <tr><th>役員</th><td>代表取締役&nbsp;山上嘉</td></tr>
+      <tr><th>代表者</th><td>代表取締役 山上 嘉</td></tr>
       <tr><th>所在地</th><td>大阪府東大阪市中新開1丁目4番8号</td></tr>
-      <tr><th>電話</th><td>06-7655-1184</td></tr>
-      <tr><th>古物商認可</th><td>大阪府公安委員会 第6221R065306号</td></tr>
-      <tr><th>事業内容</th><td>産業機械・工作機械の販売・買取 / 各種金属加工 / スマート工場の提案・設計 / クーラント清掃 / 補助金申請サポート</td></tr>
-      <tr><th>関連会社</th><td>株式会社エイエルアイ（半導体製造装置部品の精密機械加工）</td></tr>
+      <tr><th>電話番号</th><td><a href="tel:0667551184">06-7655-1184</a>（月〜土 9:00〜18:00・祝祭日除く）</td></tr>
+      <tr><th>事業内容</th><td>産業機械・工作機械の販売、中古機械の買取・販売、金属加工の受託、スマート工場・FA化支援、クーラント清掃、補助金の相談</td></tr>
+      <tr><th>許認可</th><td>古物商認可 大阪府公安委員会 第6221R065306号</td></tr>
     </table>
   </div>
 </section>
 
-<!-- 関連会社 -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <span class="en">PARTNER</span>
-      <h2>関連会社</h2>
-    </div>
-    <div class="related-card">
+<!-- partner -->
+<section class="partner">
+  <div class="inner">
+    <div class="sec-h"><div class="en">Group</div><span class="ja">関連会社</span></div>
+    <div class="pcard">
       <h3>株式会社エイエルアイ</h3>
-      <p>半導体製造装置部品の精密機械加工を手がける関連会社です。工作機械・加工の現場を直接知るパートナーとして、MITSUBACHIの機械提案を着実にバックアップします。</p>
+      <p>半導体製造装置部品の精密機械加工を手がける関連会社です。MITSUBACHIの金属加工・技術提案は、エイエルアイの加工現場と直結しています。</p>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-band">
-  <div class="container">
-    <h2>お気軽にお声がけください</h2>
-    <p>何から相談するか決まっていなくても、まずは山上にご連絡ください。</p>
-    <div class="cta-cols">
-      <div class="cta-col">
-        <p class="cta-micro">フォームから送信・24h受付</p>
-        <a class="btn btn-primary" href="contact.html">お問い合わせフォーム</a>
-      </div>
-      <div class="cta-col">
-        <p class="cta-micro">お急ぎの方はお電話が確実です</p>
-        <a class="btn btn-tel" href="tel:0676551184">&#128222; 06-7655-1184</a>
-      </div>
-    </div>
-  </div>
+<!-- DECO-014 contact guidance block -->
+<section class="cguide">
+  <h2>MITSUBACHIへのお問い合わせ</h2>
+  <a class="cta" href="contact.html">お問い合わせフォームへ</a>
+  <p class="telnote">お電話でのご相談（月〜土 9:00〜18:00・祝祭日除く）</p>
+  <a class="tel" href="tel:0667551184">06-7655-1184</a>
+  <p class="note">サービス内容は<a href="services.html">MITSUBACHIに出来る事</a>をご覧ください。</p>
 </section>
 
-</main>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand">株式会社MITSUBACHI</div>
-      <p>産業機械・工作機械の専門商社<br>大阪府東大阪市中新開1丁目4番8号<br>TEL: 06-7655-1184<br>古物商認可：大阪府公安委員会 第6221R065306号</p>
+<div class="dark">
+  <footer class="footer">
+    <div class="cols">
+      <div class="flogo">
+        <p class="en">MITSUBACHI</p>
+        <p class="ja">株式会社MITSUBACHI</p>
+        <p class="adr">大阪府東大阪市中新開1丁目4番8号<br>TEL 06-7655-1184<br>月〜土 9:00〜18:00（祝祭日除く）</p>
+      </div>
+      <div class="col">
+        <p class="head">MENU</p>
+        <a href="index.html">トップ</a>
+        <a href="services.html">MITSUBACHIに出来る事</a>
+        <a href="company.html">会社概要</a>
+        <a href="news.html">新着情報</a>
+      </div>
+      <div class="col">
+        <p class="head">SERVICE</p>
+        <a href="services.html#buy">新品機械の購入</a>
+        <a href="services.html#used">中古機械の買取・販売</a>
+        <a href="services.html#metal">金属加工の依頼</a>
+        <a href="services.html#smart">スマート工場・FA化</a>
+      </div>
+      <div class="col">
+        <p class="head">CONTACT</p>
+        <a href="contact.html">お問い合わせフォーム</a>
+        <a href="tel:0667551184">06-7655-1184</a>
+        <a href="https://www.instagram.com/yuika.yamaue/" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
-    <nav class="footer-nav" aria-label="フッター">
-      <a href="index.html">トップ</a>
-      <a href="services.html">MITSUBACHIに出来る事</a>
-      <a href="company.html">会社概要・代表挨拶</a>
-      <a href="news.html">新着情報</a>
-      <a href="contact.html">お問い合わせ</a>
-      <a href="https://www.instagram.com/yuika.yamaue/" target="_blank" rel="noopener">Instagram</a>
-    </nav>
-  </div>
-  <div class="footer-copy">&copy; <span id="year"></span> MITSUBACHI Co., Ltd.</div>
-</footer>
+    <div class="copyrow">
+      <span>© MITSUBACHI Co., Ltd.</span>
+      <span>古物商認可 大阪府公安委員会 第6221R065306号</span>
+    </div>
+  </footer>
+</div>
 
 <script src="js/main.js"></script>
 </body>

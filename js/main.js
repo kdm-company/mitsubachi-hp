@@ -1,54 +1,48 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // モバイルナビ開閉
-  const toggle = document.querySelector(".nav-toggle");
-  const nav = document.getElementById("siteNav");
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", String(open));
-    });
-  }
+// MITSUBACHI v3
+// drawer nav (SP) - a11y: aria-expanded / Esc / focus return
+const burger = document.querySelector('.burger');
+const drawer = document.querySelector('.drawer');
+if (burger && drawer) {
+  const setOpen = (open) => {
+    burger.classList.toggle('open', open);
+    drawer.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  burger.addEventListener('click', () => setOpen(!drawer.classList.contains('open')));
+  drawer.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+      setOpen(false);
+      burger.focus();
+    }
+  });
+}
 
-  // コピーライト年
-  const year = document.getElementById("year");
-  if (year) {
-    year.textContent = new Date().getFullYear();
-  }
-
-  // note RSS 自動掲載（公開時に noteアカウントURLを設定して有効化する）
-  // 例: loadNoteFeed("https://note.com/XXXX/rss");
-  // CORSの都合上、本番ではサーバーサイド or RSS-to-JSON中継の利用を想定。
-});
-
-async function loadNoteFeed(rssUrl) {
-  const container = document.getElementById("note-feed");
-  if (!container) return;
-  try {
-    const endpoint =
-      "https://api.rss2json.com/v1/api.json?rss_url=" +
-      encodeURIComponent(rssUrl);
-    const res = await fetch(endpoint);
-    const data = await res.json();
-    if (!data.items) return;
-    container.innerHTML = "";
-    data.items.slice(0, 5).forEach((item) => {
-      const a = document.createElement("a");
-      a.className = "news-item";
-      a.href = item.link;
-      a.target = "_blank";
-      a.rel = "noopener";
-      const date = new Date(item.pubDate);
-      const y = date.getFullYear();
-      const m = String(date.getMonth() + 1).padStart(2, "0");
-      const d = String(date.getDate()).padStart(2, "0");
-      a.innerHTML =
-        '<time>' + y + "." + m + "." + d + "</time>" +
-        '<span class="label">note</span>' +
-        '<span class="title"></span>';
-      a.querySelector(".title").textContent = item.title;
-      container.appendChild(a);
-    });
-  } catch (e) {
-    // フィード取得失敗時は既存表示を維持
-  }
+// light fade-in on scroll (respects prefers-reduced-motion)
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fxTargets = document.querySelectorAll(
+  '.sec-h,.axis_item,.tcard,.prod_txt,.prod_img,.band_flex,.news .row,.blk,.ceo .card,.pcard,.cguide,.cmp table'
+);
+if (!reduceMotion && 'IntersectionObserver' in window) {
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((en) => {
+        if (en.isIntersecting) {
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -40px' }
+  );
+  fxTargets.forEach((t) => {
+    t.classList.add('fx');
+    io.observe(t);
+  });
+  // safety fallback: never leave content hidden
+  setTimeout(() => {
+    fxTargets.forEach((t) => t.classList.add('in'));
+  }, 1500);
 }
