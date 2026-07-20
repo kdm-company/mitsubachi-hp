@@ -141,7 +141,7 @@ ul{list-style:none;}
 .product{position:relative;padding:112px 0 64px;background:#fff;}
 .product::before{content:"";position:absolute;top:0;left:0;width:36%;height:82%;background:var(--navy);}
 .prod_flex{position:relative;display:flex;justify-content:space-between;gap:44px;}
-.prod_img{flex:1;margin-top:110px;min-height:300px;background:url(../images/hero.webp) center/cover;}
+.prod_img{flex:1;margin-top:110px;min-height:300px;background:url(../images/about.webp) center/cover;}
 .prod_txt{width:50%;padding-top:44px;}
 .prod_txt .bigcopy{font-size:28px;font-weight:700;color:var(--navy);line-height:1.7;margin:20px 0 14px;letter-spacing:.04em;}
 .prod_txt .body{font-size:14px;color:var(--muted);}
@@ -151,7 +151,7 @@ ul{list-style:none;}
 
 /* ===== recruit-style photo band -> company invite (LAYOUT-014) ===== */
 .band{position:relative;margin-top:72px;padding:88px 0;background:var(--navy-deep);color:#fff;overflow:hidden;}
-.band::before{content:"";position:absolute;inset:0;background:url(../images/hero.webp) center/cover;opacity:.18;}
+.band::before{content:"";position:absolute;inset:0;background:url(../images/band.webp) center/cover;opacity:.18;}
 .band_flex{position:relative;display:flex;gap:44px;align-items:center;}
 .band_img{width:46%;min-height:240px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;}
 .band_img .word{font-family:'Oswald',sans-serif;font-size:20px;letter-spacing:.3em;color:rgba(255,255,255,.5);}
@@ -242,6 +242,8 @@ ul{list-style:none;}
 .ceo .card .sign small{font-weight:400;color:var(--muted);margin-right:10px;font-size:12px;}
 .ceo .person{position:absolute;right:32px;bottom:0;width:260px;height:340px;background:var(--beige);border-radius:6px 6px 0 0;display:flex;align-items:center;justify-content:center;}
 .ceo .person .word{font-size:11px;color:var(--muted);letter-spacing:.2em;text-align:center;line-height:2;}
+.ceo .person{overflow:hidden;}
+.ceo .person img{object-position:top;}
 
 /* company table */
 .cmp{padding:24px 0 112px;}
