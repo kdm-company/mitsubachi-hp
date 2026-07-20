@@ -244,6 +244,7 @@ ul{list-style:none;}
 .ceo .person .word{font-size:11px;color:var(--muted);letter-spacing:.2em;text-align:center;line-height:2;}
 .ceo .person{overflow:hidden;}
 .ceo .person img{object-position:top;}
+.band_img img{height:auto;aspect-ratio:16/10;object-fit:cover;object-position:50% 14%;}
 
 /* company table */
 .cmp{padding:24px 0 112px;}
