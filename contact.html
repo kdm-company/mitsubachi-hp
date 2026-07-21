@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>お問い合わせ｜株式会社MITSUBACHI</title>
 <meta name="description" content="株式会社MITSUBACHIへのお問い合わせ。機械の売買・加工・工場のお困りごと、お気軽にご相談ください。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="株式会社MITSUBACHI">
+<meta property="og:title" content="お問い合わせ｜株式会社MITSUBACHI">
+<meta property="og:description" content="株式会社MITSUBACHIへのお問い合わせ。機械の売買・加工・工場のお困りごと、お気軽にご相談ください。">
+<meta property="og:url" content="https://kdm-company.github.io/mitsubachi-hp/contact.html">
+<meta property="og:image" content="https://kdm-company.github.io/mitsubachi-hp/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -45,7 +52,11 @@
 </section>
 
 <div class="cwrap">
-  <form class="form" action="#" method="post">
+  <form class="form" action="https://formsubmit.co/info@mitsubachi.biz" method="POST">
+    <input type="hidden" name="_subject" value="[MITSUBACHI] ホームページからのお問い合わせ">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://kdm-company.github.io/mitsubachi-hp/thanks.html">
+    <input type="hidden" name="_captcha" value="true">
     <div class="frow">
       <label for="f-type">ご相談内容<span class="req">必須</span></label>
       <select id="f-type" name="type" required>

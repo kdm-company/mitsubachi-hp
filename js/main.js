@@ -20,6 +20,46 @@ if (burger && drawer) {
   });
 }
 
+// note RSS -> JSON feed (via rss2json.com public endpoint). Falls back to the
+// static "Coming soon" placeholder already in the HTML if the fetch fails or
+// the feed has no items yet.
+(function () {
+  const list = document.getElementById('news-list');
+  if (!list) return;
+  const soon = document.getElementById('news-soon');
+  const max = parseInt(list.dataset.max || '10', 10);
+  const noteRssUrl = 'https://note.com/fair_viper9160/rss/';
+  const feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(noteRssUrl);
+
+  fetch(feedUrl)
+    .then((res) => res.json())
+    .then((data) => {
+      if (!data || data.status !== 'ok' || !Array.isArray(data.items) || data.items.length === 0) return;
+      const items = data.items.slice(0, max);
+      list.innerHTML = items
+        .map((item) => {
+          const d = new Date(item.pubDate);
+          const date = isNaN(d.getTime())
+            ? ''
+            : d.getFullYear() + '.' + String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getDate()).padStart(2, '0');
+          const title = String(item.title || '').replace(/</g, '&lt;');
+          const link = String(item.link || noteRssUrl);
+          return (
+            '<a class="row" href="' + link + '" target="_blank" rel="noopener">' +
+            '<span class="date">' + date + '</span>' +
+            '<span class="cat honey">note</span>' +
+            '<span class="ttl">' + title + '</span></a>'
+          );
+        })
+        .join('');
+      list.hidden = false;
+      if (soon) soon.hidden = true;
+    })
+    .catch(() => {
+      // network unavailable or feed empty: keep the "Coming soon" placeholder
+    });
+})();
+
 // light fade-in on scroll (respects prefers-reduced-motion)
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fxTargets = document.querySelectorAll(
